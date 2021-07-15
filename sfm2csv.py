@@ -1,5 +1,5 @@
-# Parse xml outputs from Agisoft and create a master matrix of image labels,
-    # lat, lon, and elevations.
+# Parse xml outputs from Agisoft and create a csv matrix of image labels,
+    # lat, lon, and elevations for each bar.
 
 # *** Imports ***
 import sys
