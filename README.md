@@ -3,9 +3,9 @@
 ## Overview and objectives
 This repository hosts the image processing scripts used to map grain-size distributions within river environments. These scripts support two distinct mapping methodologies. The first uses individual non-orthrectified and Structure from Motion (SfM) processing, and the second (under construction) uses orthophotos. Along with these scripts, this repository contains the data and analyses used to compare two photosieving techniques: PebbleCounts and SediNet.
 
-## Robotic Photosieving (non-orthorectified imagers)
+## Robotic Photosieving (non-orthorectified images)
+Robotic Photosieving was introduced by Carbonneau et al (https://doi.org/10.1002/esp.4298) as a method to predict the image scale of non-orthorectified drone-based images using SfM processing. These images are processed within a larger photogrammetric project, and the resulting position and resolution is more precisely predicted by SfM processing as compared to the meter-scale error associated with consumer grade drone GPS. The following scripts address the challenge of applying this robotic photosieving workflow to many images in order to map grain-sizes throughout a river environment. The ultimate outcome is a dataset of grain-size percentiles associated with its position within the river.
 
-:
 Scripts:
 Rename.py: This script automates file renaming for each individual image based on its membership with a particular group, such as a specific gravel bar, SfM project, or river reach. This is essential to ensure that every image has a unique file name and label.
 sfm2csv.py: This script extracts the image label, latitude, longitude and elevation from the camera location xml documents exported from Agisoft Metashape, and appends this information into a single matrix.
