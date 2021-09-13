@@ -8,8 +8,8 @@ Robotic Photosieving was introduced by Carbonneau et al (https://doi.org/10.1002
 
 ### Scripts: 
 - **rename.py:** This script automates file renaming for each individual image based on its membership with a particular group, such as a specific gravel bar, SfM project, or river reach. This is essential to ensure that every image has a unique file name and label.
-- **sfm2csv.py:** This script extracts the image label, latitude, longitude and elevation from the camera location xml documents exported from Agisoft Metashape, and appends this information into a single matrix.
-- **resolutioncalc.py:** This script matches the image information to the local elevation in order to determine the camera altitude. Obtaining the local elevations at each image is a prerequisite for this script, which can be accomplished by either differencing the point to mesh in CloudCompare, or sampling the DEM at the camera point locations in a GIS. The altitude is combined with given camera specifications to calculate the image resolution (mm/pixel).
+- **sfm2csv.py:** This script extracts the image label, latitude, longitude and elevation from the camera location xml documents exported from Agisoft Metashape, and concatenates this information into a single matrix.
+- **resolutioncalc.py:** This script matches the image information to the local surface elevation in order to determine the camera altitude. Obtaining the local elevations at each image is a prerequisite for this script, which can be accomplished by either differencing the point to mesh in CloudCompare, or sampling the DEM at the camera point locations in a GIS. The altitude is combined with given camera specifications to calculate the image resolution (mm/pixel).
 - **highresimages.py:** Given a maximum resolution threshold, this script moves all of the high resolution images to a single folder and subsets these images within the matrix of image label, resolution, and geographic information.
 - **commandline.py:** This script produces unique commandline arguments for each image to be used in PebbleCounts.
 
