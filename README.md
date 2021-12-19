@@ -14,7 +14,7 @@ Robotic Photosieving was introduced by Carbonneau et al (https://doi.org/10.1002
 - **commandline.py:** This script produces unique commandline arguments for each image to be used in PebbleCounts.
 
 ### Suggested Workflow
-(1) Conduct photo survey. Organize image files into uniquely named folders to prep for Agisoft SfM processing (e.g. folders for each gravel bar or river reach).
+(1) Conduct photo survey. Organize image files into uniquely named folders to prep for Agisoft SfM processing (e.g. folders for each gravel bar or river reach). \n
 (2) Use **rename.py** to automatically give each image file a unique name.
 (3) SfM processing using Agisoft Metashape. Export cameras as a .xml for step 4. Export either the DEM or point cloud for step 5.
 (4) Use **sfm2csv.py** to extract camera location information from SfM outputs.
