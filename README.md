@@ -13,6 +13,19 @@ Robotic Photosieving was introduced by Carbonneau et al (https://doi.org/10.1002
 - **highresimages.py:** Given a maximum resolution threshold, this script moves all of the high resolution images to a single folder and subsets these images within the matrix of image label, resolution, and geographic information.
 - **commandline.py:** This script produces unique commandline arguments for each image to be used in PebbleCounts.
 
+### Suggested Workflow
+(1) Conduct photo survey. Organize image files into uniquely named folders to prep for Agisoft SfM processing (e.g. folders for each gravel bar or river reach).
+(2) Use **rename.py** to automatically give each image file a unique name.
+(3) SfM processing using Agisoft Metashape. Export cameras as a .xml for step 4. Export either the DEM or point cloud for step 5.
+(4) Use **sfm2csv.py** to extract camera location information from SfM outputs.
+(5) Use either CloudCompare or a GIS to compute distances from the camera locations to the gravel bar surface.
+(6) Use **resolutioncalc.py** to calculate the resolution (mm/pixel) of each image.
+(7) Decide on a maximum resolution for photosieving. Use **highresimages.py** to subset images based on the resolution threshold and move the original image files into a single folder.
+(8) Use **commandline.py** to produce PebbleCounts commandline arguments for each image.
+(9) Process images with PebbleCounts and save the output .csv files in a single folder.
+(10) Obtain a digitized channel centerline, bar edge, and bar centerline in a GIS.
+(11) Use **postprocess.py** to create the multi-scale grain-size dataset.
+
 ### Data:
 
 - **test_images.zip:** Contains the images utilized to compare grain-size distributions produced by manually labeling, SediNet models, and PebbleCounts.
